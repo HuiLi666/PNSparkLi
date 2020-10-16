@@ -1,11 +1,13 @@
 ## My Web Application (Title)
 
 * [General info](#general-info)
+HuiXian Zhong (Angel li)
 * [Technologies](#technologies)
 * [Contents](#content)
 
 ## General Info
-This browser based web application to ...
+This browser based web application to build
+a web-based app layout.
 	
 ## Technologies
 Technologies used for this project:
@@ -20,7 +22,9 @@ Content of the project folder:
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
+├── index.html  
+├── main.html    
+├── profile.html                 # landing HTML file, this is what users see when you come to url
 └── README.md
 
 It has the following subfolders and files:
