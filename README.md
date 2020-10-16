@@ -2,6 +2,7 @@
 
 * [General info](#general-info)
 HuiXian Zhong (Angel li)
+Phuong Anh Nghiem
 * [Technologies](#technologies)
 * [Contents](#content)
 
