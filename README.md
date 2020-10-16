@@ -3,6 +3,7 @@
 * [General info](#general-info)
 HuiXian Zhong (Angel li)
 Phuong Anh Nghiem
+Dokyung Kim
 * [Technologies](#technologies)
 * [Contents](#content)
 
