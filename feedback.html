@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> This is a feedback page</title>
+    <meta charset="utf-8">
+
+    <style>
+        .content {
+            width: 350px;
+            height: 550px;
+            border-style: solid;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(11, 1fr) 8%;
+            grid-gap: 10px;
+            grid-template-areas:
+                "search-bar search-bar search-bar ."
+                "blank blank blank blank"
+                "challenges challenges challenges ."
+                "push-noti push-noti push-noti ."
+                "reservation reservation reservation ."
+                "location-service location-service location-service ."
+                "feedback feedback feedback ."
+                "news news news ."
+                "news news news ."
+                "news news news ."
+                "news news news ."
+                "footer footer footer footer";
+
+        }
+
+        #search {
+            margin-top: 4.5px;
+            margin-left: 3px;
+            padding-right: 10px;
+
+        }
+
+        .search-bar {
+            grid-area: search-bar;
+            border-style: solid;
+
+        }
+
+        .blank {
+            grid-area: blank;
+            border-bottom-style: solid;
+            padding-left: 10px;
+        }
+
+        .challenges {
+            grid-area: challenges;
+            padding-left: 10px;
+        }
+
+        .push-noti {
+            grid-area: push-noti;
+            padding-left: 10px;
+        }
+
+        .reservation {
+            grid-area: reservation;
+            padding-left: 10px;
+        }
+
+        .location-service {
+            grid-area: location-service;
+            padding-left: 10px;
+        }
+
+        .feedback {
+            grid-area: feedback;
+            padding-left: 10px;
+        }
+
+        .news {
+            grid-area: news;
+            padding-left: 10px;
+        }
+
+        .footer {
+            grid-area: footer;
+
+        }
+
+        .font8 {
+            margin-left: 20%;
+        }
+
+        #coffee {
+            margin-left: 32%;
+            margin-top: 2%;
+        }
+
+        #home {
+            margin-left: 1%;
+        }
+
+        .input1 {
+            width: 200px;
+            margin-left: 8%;
+            margin-bottom: 1%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="search-bar"><span class="font1"><img id="search" src="search.png" width="20px" height="20px">Search for BC parks and trails</span>
+            <input class="input1" type="text">
+        </div>
+        <div class="challenges" style="background-color: #D0D0D0"><span class="font1">Challenges and Activities</span></div>
+        <div class="blank"><span class="font2"> search...</span></div>
+        <div class="push-noti" style="background-color: #D0D0D0"><span class="font3">Push Notification</span></div>
+        <div class="reservation" style="background-color: #D0D0D0"><span class="font4">Book an appointment</span></div>
+        <div class="location-service" style="background-color: #D0D0D0"><span class="font5">Location Service</span></div>
+        <div class="feedback" style="background-color: #D0D0D0"><span class="font6">Feedback</span></div>
+        <div class="news" style="background-color: #D0D0D0"><span class="font7">News</span></div>
+        <div class="footer" style="background-color: #D0D0D0"><img id="home" src="home.png" width="20px" height="20px"><span class="font8">
+                our covid footer</span><img id="coffee" src="coffee.png" width="20px" height="20px"></div>
+    </div>
+
+</body>
+
+
+</html>

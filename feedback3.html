@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> This is a third feedback page</title>
+    <meta charset="utf-8">
+
+    <style>
+        .content {
+            width: 350px;
+            height: 550px;
+            border-style: solid;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 8% repeat(14, 1fr) 8%;
+            grid-gap: 10px;
+            grid-template-areas:
+                "Parks Parks Parks Parks"
+                "Feedback Feedback Feedback Feedback"
+                ". . . ."
+                "Park-name Park-name Park-name ."
+                "Park-name Park-name Park-name ."
+                ". . . ."
+                "Overview Overview Overview ."
+                "Overview Overview Overview ."
+                "Overview Overview Overview ."
+                ". . . ."
+                "Riview Riview Riview ."
+                "Riview Riview Riview ."
+                "Riview Riview Riview ."
+                "Riview Riview Riview ."
+                "next next next next"
+                "footer footer footer footer";
+
+        }
+
+        .Parks {
+            grid-area: Parks;
+        }
+
+        .Feedback {
+            grid-area: Feedback;
+            border-bottom-style: solid;
+        }
+
+        .Park-name {
+            grid-area: Park-name;
+        }
+
+        .Overview {
+            grid-area: Overview;
+        }
+
+        .Riview {
+            grid-area: Riview;
+        }
+
+        .next {
+            grid-area: next;
+            text-align: right;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        .font1 {
+            margin-left: 41%;
+        }
+
+        #coffee {
+            margin-left: 32%;
+            margin-top: 2%;
+        }
+
+        #home {
+            margin-left: 1%;
+        }
+
+        .font6 {
+            margin-left: 20%;
+        }
+
+        .input1 {
+            height: 20px;
+            width: 220px;
+            margin-left: 3px;
+            margin-top: 2px;
+        }
+
+        .input2 {
+            height: 50px;
+            width: 220px;
+            margin-left: 3px;
+            margin-top: 2px;
+        }
+
+        .input3 {
+            width: 220px;
+        }
+
+        .input4 {
+            width: 220px;
+        }
+
+        .input5 {
+            width: 220px;
+        }
+
+        .input6 {
+            width: 220px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="Parks" style="background-color: #D0D0D0">Parks and Recreation<span class="font1">Avatar</span></div>
+
+        <div class="Feedback"><span class="font2">Feedback</span></div>
+        <div class="Park-name" style="background-color: #D0D0D0"><span class="font3">Park name:<br></span>
+            <input class="input1" type="text">
+        </div>
+        <div class="Overview" style="background-color: #D0D0D0"><span class="font4">Main points </span>
+            <input class="input2" type="text">
+        </div>
+        <div class="Riview" style="background-color: #D0D0D0"><span class="font5">Advantages/disadvantages<br>1. <input class="input3" type="text"><br>
+                2. <input class="input4" type="text"><br>3. <input class="input5" type="text"><br>4. <input class="input6" type="text"></span></div>
+        <div class="next"><button class="next-button">Make a form</button></div>
+        <div class="footer" style="background-color: #D0D0D0"><img id="home" src="home.png" width="20px" height="20px"><span class="font6">
+                our covid footer</span><img id="coffee" src="coffee.png" width="20px" height="20px"></div>
+    </div>
+
+</body>
+
+
+</html>
