@@ -4,6 +4,8 @@
 <head>
     <title> This is a third feedback page</title>
     <meta charset="utf-8">
+    <meta name="vieport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <style>
         .content {
@@ -122,17 +124,78 @@
 
         <div class="Feedback"><span class="font2">Feedback</span></div>
         <div class="Park-name" style="background-color: #D0D0D0"><span class="font3">Park name:<br></span>
-            <input class="input1" type="text">
+            <input id="input1" type="text">
         </div>
         <div class="Overview" style="background-color: #D0D0D0"><span class="font4">Main points </span>
-            <input class="input2" type="text">
+            <input id="input2" type="text">
         </div>
-        <div class="Riview" style="background-color: #D0D0D0"><span class="font5">Advantages/disadvantages<br>1. <input class="input3" type="text"><br>
-                2. <input class="input4" type="text"><br>3. <input class="input5" type="text"><br>4. <input class="input6" type="text"></span></div>
-        <div class="next"><button class="next-button">Make a form</button></div>
+        <div class="Riview" style="background-color: #D0D0D0"><span class="font5">Advantages/disadvantages<br>1. <input id="input3" type="text"><br>
+                2. <input id="input4" type="text"><br>3. <input id="input5" type="text"><br>4. <input id="input6" type="text"></span></div>
+        <div class="next">
+            <button id="submit">submit</button>
+            <a href='feedback4.html'><button class="next-button">continue</button></a>
+        </div>
         <div class="footer" style="background-color: #D0D0D0"><img id="home" src="home.png" width="20px" height="20px"><span class="font6">
                 our covid footer</span><img id="coffee" src="coffee.png" width="20px" height="20px"></div>
     </div>
+    
+    <script> 
+       $(document).ready(function(){
+           var name, mainPoint, adDi1, adDi2, adDi3, adDi4;
+           
+           $("button#submit").on("click", function(){
+              name = $("#input1").val().trim();
+              mainPoint = $("#input2").val().trim();
+              adDi1 = $("#input3").val().trim();
+              adDi2 = $("#input4").val().trim();
+              adDi3 = $("#input5").val().trim();
+              adDi4 = $("#input6").val().trim();
+              
+               database.ref('Feedback_of_park/').set({
+                 Park_Name: name,
+                 Main_Points: mainPoint,
+                 Advan_Disavan1: adDi1,
+                 Advan_Disavan2: adDi2,
+                 Advan_Disavan3: adDi3,
+                 Advan_Disavan4: adDi4,
+                
+              });
+               return false;
+           });
+           
+      
+    
+       });
+
+    </script>
+    
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+
+            // Your API stuff goes here;  get it from firebase console
+            apiKey: "AIzaSyCo2yktlgaexHr0-4k_3yjuzP9ScFnzQaA",
+            authDomain: "mango-lili.firebaseapp.com",
+            databaseURL: "https://mango-lili.firebaseio.com",
+            projectId: "mango-lili",
+            storageBucket: "mango-lili.appspot.com",
+            messagingSenderId: "361883915212",
+            appId: "1:361883915212:web:0cdc68dfb1d4d4f8184369",
+            measurementId: "G-H4MB8KDM41"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+        // Create the Firestore database object
+        // Henceforce, any reference to the database can be made with "db"
+        const db = firebase.firestore();
+    </script>
 
 </body>
 

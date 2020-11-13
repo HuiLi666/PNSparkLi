@@ -5,6 +5,8 @@
     <title> This is a fourth feedback page</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <meta name="vieport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
     <style>
@@ -110,15 +112,74 @@
 
         <div class="Feedback"><span class="font2">Feedback</span></div>
         <div class="Information" style="background-color: #D0D0D0"><span class="font3" style="font-family: Sofia">Feedback Form
-                <br> Name: <input class="name-input" type="text"><br>Contact number: <input class="number-input" type="text"><br>
-                Email: <input class="email-input" type="text"><br>Your feedback: <br></span> <input class="feedback-input" type="text">
+                <br> Name: <input id="name-input" type="text"><br>Contact number: <input id="number-input" type="text"><br>
+                Email: <input id="email-input" type="text"><br>Your feedback: <br></span> <input id="feedback-input" type="text">
 
         </div>
-        <div class="Rate" style="background-color: #D0D0D0"><span class="font4">Rate: (?/5)</span><input class="rate-input" type="text"></div>
-        <div class="Submit"><button class="submit-button">Submit</button></div>
+        <div class="Rate" style="background-color: #D0D0D0"><span class="font4">Rate: (?/5)</span><input id="rate-input" type="text"></div>
+        <div class="Submit">
+            <button id="submit">Submit</button>
+            <a href='feedback5.html'><button class="next">next</button></a>
+        </div>
         <div class="footer" style="background-color: #D0D0D0"><img id="home" src="home.png" width="20px" height="20px"><span class="font6">
                 our covid footer</span><img id="coffee" src="coffee.png" width="20px" height="20px"></div>
     </div>
+    
+     <script> 
+       $(document).ready(function(){
+           var name, number, email, feedback, rate;
+           
+           $("#submit").on("click", function(){
+              name = $("#name-input").val().trim();
+              number = $("#number-input").val().trim();
+              email = $("#email-input").val().trim();
+              feedback = $("#feedback-input").val().trim();
+              rate = $("#rate-input").val().trim();
+              
+               database.ref('Feedback_of_park/').set({
+                 Name: name,
+                 Phone_Number: number,
+                 Email: email,
+                 Feedback: feedback,
+                 Rate: rate
+                
+              });
+               return false;
+           });
+           
+      
+    
+       });
+
+    </script>
+    
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+
+            // Your API stuff goes here;  get it from firebase console
+            apiKey: "AIzaSyCo2yktlgaexHr0-4k_3yjuzP9ScFnzQaA",
+            authDomain: "mango-lili.firebaseapp.com",
+            databaseURL: "https://mango-lili.firebaseio.com",
+            projectId: "mango-lili",
+            storageBucket: "mango-lili.appspot.com",
+            messagingSenderId: "361883915212",
+            appId: "1:361883915212:web:0cdc68dfb1d4d4f8184369",
+            measurementId: "G-H4MB8KDM41"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+        // Create the Firestore database object
+        // Henceforce, any reference to the database can be made with "db"
+        const db = firebase.firestore();
+    </script>
 
 </body>
 
