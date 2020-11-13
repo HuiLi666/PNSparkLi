@@ -1,0 +1,232 @@
+<html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- link to my own css styling file: app.css-->
+    <link type="text/css" rel="stylesheet" href="../styles/angelli_style.css"/>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+   <div class="mynav"><img src="../images/background.jpg" alt="" style="height:200px; width:100vw; object-fit: cover"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="#">PNSparkLi</a>
+   
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+  <h1>Angelina's Reservation Services</h1>
+  <p>Parks available for Reservation at this time on dd/mm/yyyy based on your planned trip</p>
+
+   
+    <div class="jumbotron">
+        <h1 class="display-6">Reserve your seat here</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+     <!-- Basic Form -->
+    <form id="myform">
+    <br>
+   <label>Contact Information:</label><br>
+                    
+  <div class="form-row">
+    <div class="col">
+      <input type="text" id="fname" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+      <input type="text" id="lname" class="form-control" placeholder="Last name">
+    </div>
+  </div>
+<br>
+<!--                    <input type=" text" id="name" value="Angelina Mik"><br><br>-->
+   <label>Phone Number:</label><br>
+   <input type="text" id="phone" placeholder="(###)-###-####"><br><br>
+  <div class="form-group">
+    <label for="inputAddress">Address:</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+ <label>Choose your DayUse Pass Option:</label><br>
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Vehicle Pass
+  </label>
+</div>
+                      
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Person Pass
+  </label>
+</div><br>
+  
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Choose your DayUse Pass Time Option:</label><br>
+    <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+  <label class="form-check-label" for="inlineRadio1">8 AM - 12 PM</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+  <label class="form-check-label" for="inlineRadio2">12 PM - 5 PM</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
+  <label class="form-check-label" for="inlineRadio3">All Day(until Park Closure)</label>
+</div>
+
+  </div>
+                      
+           
+<br>
+ <div class="form-group">
+    <label for="exampleFormControlTextarea1">Tell us anything about you and your preferences for your trip:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+      <label for="exampleFormControlTextarea1">Do you want a medical mask or a pair of gloves? </label>
+                        <!-- Toss in two checkboxes -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                A medical mask
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check2">
+                            <label class="form-check-label" for="defaultCheck2">
+                                A pair of medical gloves
+                            </label>
+                        </div>
+<br>
+                        <!-- submit button of the form -->
+<!--                        <br><br><a href="#" class="btn btn-primary" input type="submit" value="Submit">Submit</a>-->
+      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- This is where shops are to be displayed -->
+<!--
+    <div class="jumbotron">
+        <h1 class="display-4">List of Shops</h1>
+        <div id="shops"></div>
+    </div>
+-->
+
+    <!-- This is where quotes are to be displayed -->
+<!--
+    <div class="jumbotron">
+        <h1 class="display-4">Display of quotes</h1>
+        <div id="quotes-go-here"></div>
+    </div>
+-->
+
+    <!-- Input text to get some user info -->
+<!--
+    <div class="jumbotron">
+        <h1 class="display-4">What are your favourite fruits?</h1>
+        <p> Fruit1: </p> <input type="text" id="fruit1">
+        <p> Fruit2: </p> <input type="text" id="fruit2">
+        <button id="myBtn">SUBMIT</button>
+    </div>
+-->
+
+    <!-------------------------------------------->
+    <!-- The following is JS for functionality  -->
+    <!-------------------------------------------->
+    <!-- Bootstrap libraries from CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <!-- Firebase libraries from CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+     <!-- Your own Firebase API key information -->
+    <script src="scripts/firebase_api_AngelT28.js"> </script>
+    <!-- Your own JavaScript functions included here    -->
+    <script src="scripts/app.js"> </script>
+
+<!--
+  <div class="flexbox">
+    <div class="item i1">
+    <p>Content for information:  </p>
+      <p>Name </p>
+        <p>Phone Number  </p>
+       <p>Address </p>
+      <div id="s"></div>
+    </div>
+      <p>Choose only one type of pass:   </p>
+    <div class="item i2">
+          <p> Vehicle Pass(Max. of 1 pass):  </p>
+    </div>
+    <div class="item i2">
+           <p> Person Pass: (Max. of 1 pass):  </p>
+    </div>
+       <p>Choose only one Day-Use pass Time Option:   </p>
+    <div class="item i2">
+          <p> Morning :_____AM </p>
+    </div>
+    <div class="item i2">
+           <p> Afternoon:_____PM  </p>
+    </div>
+    <div class="item i2">
+           <p> All Day (until Park Closure)</p>
+    </div>
+    <div class="item i3"></div>
+  </div>  
+-->
+
+  </body>
