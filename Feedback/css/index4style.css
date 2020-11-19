@@ -92,10 +92,13 @@
     width: 100px;
 }
 
-.feedback-input {
-    height: 75px;
-    width: 240px;
+#feedback-input {
     margin-left: 3px;
+}
+
+#textInput {
+    width: 80%;
+    height: 400px;
 }
 
 .rate-input {

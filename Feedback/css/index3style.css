@@ -3,23 +3,23 @@
     width: 80%;
     height: 80%;
     margin-left: 10%;
+    
 }
 
 .content {
 
 
+    padding-left: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(14, 1fr);
+    grid-template-rows: repeat(12, 1fr);
     grid-gap: 10px;
     grid-template-areas:
 
         "Feedback Feedback Feedback Feedback"
         ". . . ."
         "Park-name Park-name Park-name ."
-        "Park-name Park-name Park-name ."
         ". . . ."
-        "Overview Overview Overview ."
         "Overview Overview Overview ."
         "Overview Overview Overview ."
         ". . . ."
@@ -82,34 +82,9 @@
     color: white;
 }
 
-.input1 {
-    height: 20px;
-    width: 220px;
-    margin-left: 3px;
-    margin-top: 2px;
-}
-
-.input2 {
-    height: 50px;
-    width: 220px;
-    margin-left: 3px;
-    margin-top: 2px;
-}
-
-.input3 {
-    width: 220px;
-}
-
-.input4 {
-    width: 220px;
-}
-
-.input5 {
-    width: 220px;
-}
-
-.input6 {
-    width: 220px;
+#input {
+    width: 60%;
+    height: 100px;
 }
 
 #submit {
