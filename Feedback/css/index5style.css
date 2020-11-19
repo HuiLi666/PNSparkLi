@@ -1,0 +1,88 @@
+#size1 {
+    margin-top: 10%;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(13, 1fr);
+    grid-gap: 10px;
+    grid-template-areas:
+       
+        "Feedback Feedback Feedback Feedback"
+        ". . . ."
+        "Information Information Information ."
+        "Information Information Information ."
+        "Information Information Information ."
+        "Information Information Information ."
+        "Information Information Information ."
+        "Information Information Information ."
+        "Information Information Information ."
+        ". . . ."
+        "Rate Rate Rate ."
+        ". . . ."
+       
+        ". . . .";
+}
+
+
+.Feedback {
+    grid-area: Feedback;
+   
+}
+
+.Information {
+    grid-area: Information;
+}
+
+.Rate {
+    grid-area: Rate;
+}
+
+.font2 {
+    color: white;
+    font-size: 20px;
+}
+
+
+.font3 {
+   color: white;
+}
+
+#coffee {}
+
+#home {}
+
+.font6 {}
+
+.name-input {
+    width: 100px;
+}
+
+.number-input {
+    width: 100px;
+}
+
+.email-input {
+    width: 100px;
+}
+
+.feedback-input {
+    height: 75px;
+    width: 240px;
+    margin-left: 3px;
+}
+
+.rate-input {
+    margin-bottom: 1px;
+}
+
+.complete {}
+
+.contact-number {}

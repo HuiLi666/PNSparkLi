@@ -11,12 +11,12 @@
 
     <style>
         .content {
-            width: 350px;
-            height: 550px;
+            width: 100%;
+            height: 100%;
             border-style: solid;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 8% repeat(14, 1fr) 8%;
+            grid-template-rows: 30px repeat(14, 1fr) 50px;
             grid-gap: 10px;
             grid-template-areas:
                 "Parks Parks Parks Parks"
@@ -60,6 +60,10 @@
 
         .footer {
             grid-area: footer;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+            align-items: center;
         }
 
         .font1 {
@@ -67,16 +71,15 @@
         }
 
         #coffee {
-            margin-left: 32%;
-            margin-top: 2%;
+          
         }
 
         #home {
-            margin-left: 1%;
+            
         }
 
         .font6 {
-            margin-left: 20%;
+            
         }
 
         .name-input {
@@ -121,6 +124,35 @@
         <div class="footer" style="background-color: #D0D0D0"><img id="home" src="home.png" width="20px" height="20px"><span class="font6">
                 our covid footer</span><img id="coffee" src="coffee.png" width="20px" height="20px"></div>
     </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+    <script>
+        var firebaseConfig = {
+
+            // Your API stuff goes here;  get it from firebase console
+            apiKey: "AIzaSyCo2yktlgaexHr0-4k_3yjuzP9ScFnzQaA",
+            authDomain: "mango-lili.firebaseapp.com",
+            databaseURL: "https://mango-lili.firebaseio.com",
+            projectId: "mango-lili",
+            storageBucket: "mango-lili.appspot.com",
+            messagingSenderId: "361883915212",
+            appId: "1:361883915212:web:0cdc68dfb1d4d4f8184369",
+            measurementId: "G-H4MB8KDM41"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+        // Create the Firestore database object
+        // Henceforce, any reference to the database can be made with "db"
+        const db = firebase.firestore();
+
+    </script>
 
 </body>
 

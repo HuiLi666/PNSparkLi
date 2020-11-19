@@ -1,0 +1,106 @@
+.content {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(14, 2fr);
+    grid-gap: 10px;
+    grid-template-areas:
+
+        "Feedback Feedback Feedback Feedback"
+        ". . . ."
+        "Type-in Type-in Type-in ."
+        "Type-in Type-in Type-in ."
+        "Type-in Type-in Type-in ."
+        ". . . ."
+        ". Suggestions Suggestions Suggestions "
+        ". Suggestions Suggestions Suggestions "
+        ". Suggestions Suggestions Suggestions "
+        ". . . ."
+        "Photo Photo Photo ."
+        "Photo Photo Photo ."
+        "Photo Photo Photo ."
+        "next next next next";
+
+}
+
+
+.Avatar {
+    grid-area: Avatar;
+}
+
+.Feedback {
+    grid-area: Feedback;
+
+}
+
+.Type-in {
+    grid-area: Type-in;
+}
+
+.Suggestions {
+    grid-area: Suggestions;
+}
+
+.Photo {
+    grid-area: Photo;
+}
+
+.next {
+    grid-area: next;
+    text-align: right;
+}
+
+
+.font1 {
+    margin-left: 41%;
+    color: azure;
+}
+
+.font2 {
+    color: azure;
+    
+    font-size: 20px;
+}
+
+.font3 {
+    color: azure;
+}
+
+.font4 {
+    color: azure;
+}
+
+.font5 {
+    color: azure;
+}
+
+#coffee {
+    color: azure;
+}
+
+
+#home {}
+
+.font6 {
+    color: azure;
+}
+
+.input1 {
+    height: 30px;
+    width: 220px;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+
+.input2 {
+    height: 50px;
+    width: 220px;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+
+#seperate {
+    display: flex;
+}

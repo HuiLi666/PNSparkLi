@@ -9,12 +9,12 @@
 
     <style>
         .content {
-            width: 350px;
-            height: 550px;
+            width: 100%;
+            height: 100%;
             border-style: solid;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 8% repeat(14, 1fr) 8%;
+            grid-template-rows: 30px repeat(14, 2fr) 50px;
             grid-gap: 10px;
             grid-template-areas:
                 "Parks Parks Parks Parks"
@@ -46,7 +46,7 @@
 
         .Feedback {
             grid-area: Feedback;
-            border-bottom-style: solid;
+
         }
 
         .Type-in {
@@ -68,23 +68,43 @@
 
         .footer {
             grid-area: footer;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+            align-items: center;
+
         }
 
         .font1 {
             margin-left: 41%;
+            color: azure;
+        }
+        
+        .font2 {
+            color: azure;
+        }
+        
+        .font3 {
+            color: azure;
+        }
+        
+        .font4 {
+            color: azure;
+        }
+        
+        .font5 {
+            color: azure;
         }
 
         #coffee {
-            margin-left: 32%;
-            margin-top: 2%;
+            color: azure;
         }
 
-        #home {
-            margin-left: 1%;
-        }
+
+        #home {}
 
         .font6 {
-            margin-left: 20%;
+            color: azure;
         }
 
         .input1 {
@@ -105,50 +125,35 @@
 
 </head>
 
-<body>
+<body>#4edae4
 
-    <div class="content">
-        <div class="Parks" style="background-color: #D0D0D0">Parks and Recreation<span class="font1">Avatar</span></div>
+    <div class="content" style="background-color: #4edae4" >
+        <div class="Parks" style="background-color: #dbf8fa">Parks and Recreation<span class="font1">Avatar</span></div>
 
         <div class="Feedback"><span class="font2">Feedback</span></div>
-        <div class="Type-in" style="background-color: #D0D0D0"><span class="font3">Name of the park that you want give a feedback to?
+        <div class="Type-in" style="background-color: #176aa1"><span class="font3">Name of the park that you want give a feedback to?
                 <button id="park" type="submit">Go</button><br></span>
             <input type="text" id="input1">
         </div>
-        <div class="Suggestions" style="background-color: #D0D0D0"><span class="font4">Description</span>
+        <div class="Suggestions" style="background-color: #176aa1"><span class="font4">Description</span>
 
         </div>
-        <div class="Photo" style="background-color: #D0D0D0"><span class="font5">Park photo</span></div>
+        <div class="Photo" style="background-color: #176aa1"><span class="font5">Park photo</span></div>
         <div class="next"><a href='feedback3.html'><button id="next-button">next</button></a></div>
-        <div class="footer" style="background-color: #D0D0D0"><img id="home" src="home.png" width="20px" height="20px"><span class="font6">
+        <div class="footer" style="background-color: #dbf8fa"><img id="home" src="home.png" width="20px" height="20px"><span class="font6">
                 our covid footer</span><img id="coffee" src="coffee.png" width="20px" height="20px"></div>
     </div>
 
 
-       
-        
-    <script> 
-       $(document).ready(function(){
-           var name = "";
-           $("button#park").on("click", function(){
-              name = $("#input1").val().trim();
-              database.ref('Parks/').set({
-                 name: name 
-              });
-               return false;
-           });
-           
-      
-    
-       });
 
-    </script>
-    
-    
+
+
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
 
     <script>
         var firebaseConfig = {
@@ -170,9 +175,29 @@
         // Create the Firestore database object
         // Henceforce, any reference to the database can be made with "db"
         const db = firebase.firestore();
+
     </script>
 
-    
+
+
+    <script>
+        $(document).ready(function() {
+            var name = "";
+            $("button#park").on("click", function() {
+                name = $("#input1").val().trim();
+                db.collection("Park_Name").add({
+                    name: name
+                });
+                return false;
+            });
+
+
+
+        });
+
+    </script>
+
+
 </body>
 
 
