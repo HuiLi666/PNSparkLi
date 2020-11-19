@@ -47,6 +47,7 @@
 
 .Submit {
     grid-area: Submit;
+    text-align: right;
 }
 
 .font1 {
@@ -99,4 +100,16 @@
 
 .rate-input {
     margin-bottom: 1px;
+}
+
+#submit {
+    color: #fff;
+    background-color: #64a19d;
+    border-color: #64a19d;
+}
+
+#next {
+    color: #fff;
+    background-color: #64a19d;
+    border-color: #64a19d;
 }

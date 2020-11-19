@@ -6,112 +6,120 @@
 }
 
 .content {
-    
-            
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: repeat(14, 1fr);
-            grid-gap: 10px;
-            grid-template-areas:
-               
-                "Feedback Feedback Feedback Feedback"
-                ". . . ."
-                "Park-name Park-name Park-name ."
-                "Park-name Park-name Park-name ."
-                ". . . ."
-                "Overview Overview Overview ."
-                "Overview Overview Overview ."
-                "Overview Overview Overview ."
-                ". . . ."
-                "Riview Riview Riview ."
-                "Riview Riview Riview ."
-                "Riview Riview Riview ."
-                "Riview Riview Riview ."
-                "next next next next";
 
-        }
 
-        
-        .Feedback {
-            grid-area: Feedback;
-            
-        }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(14, 1fr);
+    grid-gap: 10px;
+    grid-template-areas:
 
-        .Park-name {
-            grid-area: Park-name;
-        }
+        "Feedback Feedback Feedback Feedback"
+        ". . . ."
+        "Park-name Park-name Park-name ."
+        "Park-name Park-name Park-name ."
+        ". . . ."
+        "Overview Overview Overview ."
+        "Overview Overview Overview ."
+        "Overview Overview Overview ."
+        ". . . ."
+        "Riview Riview Riview ."
+        "Riview Riview Riview ."
+        "Riview Riview Riview ."
+        "Riview Riview Riview ."
+        "next next next next";
 
-        .Overview {
-            grid-area: Overview;
-        }
+}
 
-        .Riview {
-            grid-area: Riview;
-        }
 
-        .next {
-            grid-area: next;
-            text-align: right;
-        }
+.Feedback {
+    grid-area: Feedback;
 
-       
-       
+}
 
-        #coffee {
-           
-        }
+.Park-name {
+    grid-area: Park-name;
+}
 
-        #home {
-            
-        }
+.Overview {
+    grid-area: Overview;
+}
 
-        .font2 {
-            color: white;
-            font-size: 20px;
-        }
+.Riview {
+    grid-area: Riview;
+}
 
-        .font3 {
-            color: white;
-        }
+.next {
+    grid-area: next;
+    text-align: right;
+}
 
-        .font4 {
-            color: white;
-        }
 
-        .font5 {
-            color: white;
-        }
 
-        .font6 {
-            color: white;
-        }
 
-        .input1 {
-            height: 20px;
-            width: 220px;
-            margin-left: 3px;
-            margin-top: 2px;
-        }
+#coffee {}
 
-        .input2 {
-            height: 50px;
-            width: 220px;
-            margin-left: 3px;
-            margin-top: 2px;
-        }
+#home {}
 
-        .input3 {
-            width: 220px;
-        }
+.font2 {
+    color: white;
+    font-size: 20px;
+}
 
-        .input4 {
-            width: 220px;
-        }
+.font3 {
+    color: white;
+}
 
-        .input5 {
-            width: 220px;
-        }
+.font4 {
+    color: white;
+}
 
-        .input6 {
-            width: 220px;
-        }
+.font5 {
+    color: white;
+}
+
+.font6 {
+    color: white;
+}
+
+.input1 {
+    height: 20px;
+    width: 220px;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+
+.input2 {
+    height: 50px;
+    width: 220px;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+
+.input3 {
+    width: 220px;
+}
+
+.input4 {
+    width: 220px;
+}
+
+.input5 {
+    width: 220px;
+}
+
+.input6 {
+    width: 220px;
+}
+
+#submit {
+    color: #fff;
+    background-color: #64a19d;
+    border-color: #64a19d;
+}
+
+#next-button {
+    color: #fff;
+    background-color: #64a19d;
+    border-color: #64a19d;
+}

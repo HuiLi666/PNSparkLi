@@ -60,7 +60,7 @@
 
 .font2 {
     color: azure;
-    
+
     font-size: 20px;
 }
 
@@ -103,4 +103,16 @@
 
 #seperate {
     display: flex;
+}
+
+#park {
+    color: #fff;
+    background-color: #64a19d;
+    border-color: #64a19d;
+}
+
+#next-button {
+    color: #fff;
+    background-color: #64a19d;
+    border-color: #64a19d;
 }

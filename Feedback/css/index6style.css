@@ -11,7 +11,7 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(13, 1fr);
+    grid-template-rows: repeat(14, 1fr);
     grid-gap: 10px;
     grid-template-areas:
 
@@ -27,9 +27,14 @@
         ". . . ."
         "Rate Rate Rate ."
         ". . . ."
-        ". . . .";
+        "Submit Submit Submit submit"
+        ". . . ."
 }
 
+.Submit {
+    grid-area: Submit;
+
+}
 
 .Feedback {
     grid-area: Feedback;
@@ -38,14 +43,17 @@
 
 .Information {
     grid-area: Information;
+
 }
 
 .share {
     grid-area: share;
+
 }
 
 .Rate {
     grid-area: Rate;
+
 }
 
 
@@ -93,7 +101,23 @@
     margin-right: 5px;
 }
 
-.contact-number {}
+.contact-number {
+    color: #fff;
+    background-color: #64a19d;
+    border-color: #64a19d;
+}
+
+.share1 {
+    color: #fff;
+    background-color: #64a19d;
+    border-color: #64a19d;
+}
+
+.complete {
+    color: #fff;
+    background-color: #64a19d;
+    border-color: #64a19d;
+}
 
 .share {
     color: blue;
