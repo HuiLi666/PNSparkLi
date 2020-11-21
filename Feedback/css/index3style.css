@@ -3,7 +3,7 @@
     width: 80%;
     height: 80%;
     margin-left: 10%;
-    
+
 }
 
 .content {
@@ -82,7 +82,29 @@
     color: white;
 }
 
-#input {
+#input {}
+
+#input2 {
+    width: 60%;
+    height: 100px;
+}
+
+#input3 {
+    width: 60%;
+    height: 100px;
+}
+
+#input4 {
+    width: 60%;
+    height: 100px;
+}
+
+#input5 {
+    width: 60%;
+    height: 100px;
+}
+
+#input6 {
     width: 60%;
     height: 100px;
 }

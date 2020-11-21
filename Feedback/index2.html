@@ -24,7 +24,7 @@
 <body id="page-top" style="background-color: #C9CDCF">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container"> 
+        <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="index.html#page-top" style="color: black">PNSPARKLI</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -47,7 +47,7 @@
 
 
     <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-        <div class="col-xl-8 col-lg-7" style="margin-top: 10%" ><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="" width="98%"/ ></div>
+        <div class="col-xl-8 col-lg-7" style="margin-top: 10%"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="" width="98%" /></div>
         <div class="col-xl-4 col-lg-5" style="margin-top: 10%">
             <div class="featured-text text-center text-lg-left">
                 <div class="content" style="background-color: #61676B">
@@ -59,6 +59,7 @@
                         <input type="text" id="input1">
                     </div>
                     <div class="Suggestions" style="background-color: #27292B"><span class="font4">Description</span>
+                        <ul id="user"></ul>
 
                     </div>
                     <div class="Photo" style="background-color: #27292B"><span class="font5">Park photo</span></div>
@@ -82,14 +83,14 @@
         var firebaseConfig = {
 
             // Your API stuff goes here;  get it from firebase console
-            apiKey: "AIzaSyCo2yktlgaexHr0-4k_3yjuzP9ScFnzQaA",
-            authDomain: "mango-lili.firebaseapp.com",
-            databaseURL: "https://mango-lili.firebaseio.com",
-            projectId: "mango-lili",
-            storageBucket: "mango-lili.appspot.com",
-            messagingSenderId: "361883915212",
-            appId: "1:361883915212:web:0cdc68dfb1d4d4f8184369",
-            measurementId: "G-H4MB8KDM41"
+            apiKey: "AIzaSyASwCvqj3_Y7kchBbwF_RNTlfqsPh8wx4s",
+            authDomain: "pnsparkli.firebaseapp.com",
+            databaseURL: "https://pnsparkli.firebaseio.com",
+            projectId: "pnsparkli",
+            storageBucket: "pnsparkli.appspot.com",
+            messagingSenderId: "976943858986",
+            appId: "1:976943858986:web:e9ecdca5178a4c6a6d0a53",
+            measurementId: "G-0W1HFPTQHV"
         };
 
         // Initialize Firebase
@@ -105,21 +106,43 @@
 
     <script>
         $(document).ready(function() {
-            var name = "";
+            var name;
             $("button#park").on("click", function() {
                 name = $("#input1").val().trim();
-                db.collection("Park_Name").add({
+                db.collection("Park_Name/").add({
                     name: name
                 });
                 return false;
             });
+
+            const parkName = document.querySelector('#user');
+
+            function renderName(doc) {
+                let li = document.createElement('li');
+                let name = document.createElement('span')
+
+                li.setAttribute("data-id", doc.id);
+                name.textContent = doc.data().name;
+
+                li.appendChild(name);
+                parkName.appendChild(li);
+            }
+
+            db.collection("Park_Name").get().then((snapshot) => {
+                snapshot.docs.forEach(doc => {
+                    renderName(doc);
+                })
+            })
+
+
+
 
 
 
         });
 
     </script>
-    
+
     <!-- Signup-->
     <section class="signup-section" id="signup">
         <div class="container">

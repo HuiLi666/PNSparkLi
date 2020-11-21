@@ -4,20 +4,20 @@
 //---------------------------------------------------------------------
 
 var firebaseConfig = {
-    
+
     // Your API stuff goes here;  get it from firebase console
-    apiKey: "AIzaSyCo2yktlgaexHr0-4k_3yjuzP9ScFnzQaA",
-    authDomain: "mango-lili.firebaseapp.com",
-    databaseURL: "https://mango-lili.firebaseio.com",
-    projectId: "mango-lili",
-    storageBucket: "mango-lili.appspot.com",
-    messagingSenderId: "361883915212",
-    appId: "1:361883915212:web:0cdc68dfb1d4d4f8184369",
-    measurementId: "G-H4MB8KDM41"
-  };
-  
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  // Create the Firestore database object
-  // Henceforce, any reference to the database can be made with "db"
-  const db = firebase.firestore();
+    apiKey: "AIzaSyASwCvqj3_Y7kchBbwF_RNTlfqsPh8wx4s",
+    authDomain: "pnsparkli.firebaseapp.com",
+    databaseURL: "https://pnsparkli.firebaseio.com",
+    projectId: "pnsparkli",
+    storageBucket: "pnsparkli.appspot.com",
+    messagingSenderId: "976943858986",
+    appId: "1:976943858986:web:e9ecdca5178a4c6a6d0a53",
+    measurementId: "G-0W1HFPTQHV"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+// Create the Firestore database object
+// Henceforce, any reference to the database can be made with "db"
+const db = firebase.firestore();

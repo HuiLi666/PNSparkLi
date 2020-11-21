@@ -55,10 +55,10 @@
                 <input id="input1" type="text">
             </div>
             <div class="Overview" style="background-color: #27292B"><span class="font4">Main points:<br> </span>
-                <input id="input" type="text">
+                <input id="input2" type="text">
             </div>
-            <div class="Riview" style="background-color: #27292B"><span class="font5">Advantages/disadvantages<br>1. <input id="input" type="text"><br>
-                    2. <input id="input" type="text"><br>3. <input id="input" type="text"><br>4. <input id="input" type="text"></span></div>
+            <div class="Riview" style="background-color: #27292B"><span class="font5">Advantages/disadvantages<br>1. <input id="input3" type="text"><br>
+                    2. <input id="input4" type="text"><br>3. <input id="input5" type="text"><br>4. <input id="input6" type="text"></span></div>
             <div class="next">
                 <button id="submit">submit</button>
                 <a href='index4.html'><button id="next-button">continue</button></a>
@@ -78,14 +78,14 @@
         var firebaseConfig = {
 
             // Your API stuff goes here;  get it from firebase console
-            apiKey: "AIzaSyCo2yktlgaexHr0-4k_3yjuzP9ScFnzQaA",
-            authDomain: "mango-lili.firebaseapp.com",
-            databaseURL: "https://mango-lili.firebaseio.com",
-            projectId: "mango-lili",
-            storageBucket: "mango-lili.appspot.com",
-            messagingSenderId: "361883915212",
-            appId: "1:361883915212:web:0cdc68dfb1d4d4f8184369",
-            measurementId: "G-H4MB8KDM41"
+            apiKey: "AIzaSyASwCvqj3_Y7kchBbwF_RNTlfqsPh8wx4s",
+            authDomain: "pnsparkli.firebaseapp.com",
+            databaseURL: "https://pnsparkli.firebaseio.com",
+            projectId: "pnsparkli",
+            storageBucket: "pnsparkli.appspot.com",
+            messagingSenderId: "976943858986",
+            appId: "1:976943858986:web:e9ecdca5178a4c6a6d0a53",
+            measurementId: "G-0W1HFPTQHV"
         };
 
         // Initialize Firebase
@@ -112,7 +112,7 @@
                 adDi3 = $("#input5").val().trim();
                 adDi4 = $("#input6").val().trim();
 
-                db.collection("Feedback_of_park").add({
+                db.collection("Feedback_of_park/").add({
                     Park_Name: name,
                     Main_Points: mainPoint,
                     Advan_Disavan1: adDi1,
