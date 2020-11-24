@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Angel_Page2</title>
+  <meta class="comp1800_boilerplate_code" content="my bcit project T28">
+  <meta class="HuiXian_Zhong" content="BCIT_CST_term1_project_T28">
+
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+
+  <!-- <link rel="stylesheet" href="fonts/font-awesome.css"> -->
+  <!-- Team and my CSS -->
+  <link rel="stylesheet" href="css/angeli_style.css">
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <!-- <link rel="stylesheet" href="css/boostrap.css"> -->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- Team and my CSS -->
+  <!-- <link rel="stylesheet" href="css/boostrap.css"> -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/angeli_style.css">
+
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Varela+Round&display=swap" rel="stylesheet"> -->
+  <!-- <script src="js/jquery.js"></script> -->
+</head>
+
+<body>
+  <!-- Navigation-->
+  <!-- <nav>
+        <ul>
+            <li class="logo">PNSparkLi</li>
+            <div class="items">
+                <li><a href="#"></a>Home</li>
+                <li><a href="#"></a>About</li>
+                <li><a href="#"></a>Services</li>
+                <li><a href="#"></a>Contact</li>
+        
+                <li><a href="#"></a>Login</li>
+                <li class="seach-icon">
+                    <input type="search" placeholder="Search">
+                    <label for="" class="icon">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                </li>
+            </div>
+        </ul>
+    </nav>
+     -->
+  <!-- w3chool navbar -->
+  <div class="topnav">
+    <a class="active" href="main.html">PNSparkLi</a>
+
+    <a href="#about">About</a>
+    <a href="#contact">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="login.html">Login</a>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit" class="green"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!--Carousel Wrapper-->
+  <!--Carousel Wrapper-->
+  <div id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#video-carousel-example" data-slide-to="0" class="active"></li>
+      <li data-target="#video-carousel-example" data-slide-to="1"></li>
+      <li data-target="#video-carousel-example" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <video class="video-fluid" autoplay loop muted>
+          <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="carousel-item">
+        <video class="video-fluid" autoplay loop muted>
+          <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="carousel-item">
+        <video class="video-fluid" autoplay loop muted>
+          <source src="https://mdbootstrap.com/img/video/Agua-natural.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#video-carousel-example" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#video-carousel-example" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+  </div>
+
+  <!-- my div -->
+  <div>
+    <h1 class="page_title">Find your favorite park in British Columbia, Canada</h1>
+    <h1 class="page_title">Popular parks in BC </h1>
+  </div>
+  <div class="p">
+    <div class="posts">
+      <div class="post">
+        <div class="post_img">
+          <img src="images/hike.jpg" alt="">
+        </div>
+        <!-- information about the real trail refer to Alltrails -->
+        <div class="post_info">
+          <h3 class="post_title">Golden Ears Trail</h1>
+            <div class="post_location">
+              <p class="i">Maple Ridge, British Columbia, Canada</p>
+              <span class="tag_rating_number">
+                <!-- Add icon library -->
+                <span class="tag">easy</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star-half-o ay" aria-hidden="true"></span>
+                <span class="i">(366)</span>
+              </span>
+              <p class="i">Length: 21.7km - Est. 9h 14m</p>
+              <a class="btn btn-primary a" href="onepark.html" role="button">Read more</a>
+
+            </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post_img">
+          <img src="images/hike2.jpg" alt="">
+        </div>
+        <div class="post_info">
+          <h3 class="post_title">Inner Pacific Spirit Loop Hike</h1>
+            <div class="post_location">
+              <p class="i">Greater Vancouver, British Columbia, Canada</p>
+              <span class="tag_rating_number">
+                <!-- Add icon library -->
+                <span class="tag">easy</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star-half-o ay" aria-hidden="true"></span>
+                <span class="fa fa-star-o a"></span>
+                <span class="i">(72)</span>
+
+              </span>
+              <p class="i">Length: 6.9km - Est. 1h 53m</p>
+              <a class="btn btn-primary" href="#" role="button">Read more</a>
+            </div>
+        </div>
+      </div>
+      <div class="post">
+        <div class="post_img">
+          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(54).jpg" alt="">
+        </div>
+        <div class="post_info">
+          <h3 class="post_title">Inner Pacific Spirit Loop Hike</h1>
+            <div class="post_location">
+              <p class="i">Greater Vancouver, British Columbia, Canada</p>
+              <span class="tag_rating_number">
+                <!-- Add icon library -->
+                <span class="tag">easy</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star-half-o ay" aria-hidden="true"></span>
+                <span class="fa fa-star-o a"></span>
+                <span class="i">(72)</span>
+              </span>
+              <p class="i">Length: 6.9km - Est. 1h 53m</p>
+              <a class="btn btn-primary" href="#" role="button">Read more</a>
+              <!-- <a href="" class="post_cta">Read more</a> -->
+            </div>
+        </div>
+      </div>
+      <div class="post">
+        <div class="post_img">
+          <img src="images/hike3.jpg" alt="">
+        </div>
+        <div class="post_info">
+          <h3 class="post_title">Inner Pacific Spirit Loop Hike</h1>
+            <div class="post_location">
+              <p class="i">Greater Vancouver, British Columbia, Canada</p>
+              <span class="tag_rating_number">
+                <!-- Add icon library -->
+                <span class="tag">easy</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star-half-o ay" aria-hidden="true"></span>
+                <span class="fa fa-star-o a"></span>
+                <span class="i">(72)</span>
+              </span>
+              <p class="i">Length: 6.9km - Est. 1h 53m</p>
+              <a class="btn btn-primary" href="#" role="button">Read more</a>
+              <!-- <a href="" class="post_cta">Read more</a> -->
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Bootstrap JS loaded before body section to have animation -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
