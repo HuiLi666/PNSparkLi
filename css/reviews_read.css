@@ -1,0 +1,18 @@
+/* #d_margin{
+    margin-top: 66px;
+} */
+.reviewbutton{
+    padding: 1.2em;
+    margin: 30px auto 0; /* Center website */
+    width: 86%; /* Max width */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* border: 2px solid #c9cdcf; */
+    column-gap: 46px;
+    /*horizontal vertical opacity-solid length-width*/
+ 
+    border-radius: 5px 10px 15px 20px;
+}
+.rw{
+    transform: translateY(-50px);
+}

@@ -1,0 +1,87 @@
+.userRating {
+    padding: 1.2em;
+    margin: 30px auto 0; /* Center website */
+    width: 86%; /* Max width */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* border: 2px solid #c9cdcf; */
+    column-gap: 46px;
+    /*horizontal vertical opacity-solid length-width*/
+    box-shadow: 10px 10px 5px -6px #c9cdcf;
+    border-radius: 5px 10px 15px 20px;
+  }
+/* modified codes from youTude Tutorials */
+/* source: youtube.com/watch?v=_Tfz1DAygrQ */
+  *{
+      margin: 0;
+      padding:0;
+      box-sizing: border-box;
+  }
+  .review{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 196px;
+  }
+  .blog_card{
+      position: absolute;
+      height: 180px;
+      width: 95%;
+      max-width: 850px;
+      margin: auto; 
+      background: #c9cdcf2b; 
+      border-radius: 12px;
+      box-shadow: 10px 10px 5px -6px #c9cdcf;
+  }
+  .blog_card .inner_card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+    /* lower height than the parent div shift thing down */
+    height: 195px;
+  }
+  .blog_card .inner_card .img{
+    height: 100px;
+    width: 100px;
+    /* clip a picture, not over text */
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 100%;
+    box-shadow: 10px 10px 8px -6px #c9cdcf;
+  }
+  .img img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      /* opacity: 0; */
+  }
+
+  .content{
+      padding: 0 20px 0 35px;
+      /* width: 530px; */
+      margin-left: 10px;
+  }
+  /* End modifying codes from youTude Tutorials */
+
+  .name{
+      /* display span as a block to add styling to the span? */
+      display: block;
+      color: #61676b;
+      margin-bottom: 6px;
+      font-size: 17px;
+      font-weight: bold;
+  }
+  .light_time_past{
+      color: #61676b;
+  }
+  .rw{
+      /* transform: translate(20%, 86%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #d_margin{
+      margin-top: 66px;
+  }

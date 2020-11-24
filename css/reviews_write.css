@@ -1,0 +1,27 @@
+.add_review{
+    font-size: 20px;
+
+    width: 300px;
+  }
+  .userRatingR{
+    padding: 1.2em;
+    margin: 30px auto 0; /* Center website */
+    /* width: 86%; Max width */
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    /* border: 2px solid #c9cdcf; */
+    column-gap: 46px;
+    /*horizontal vertical opacity-solid length-width*/
+    box-shadow: 10px 10px 5px -6px #c9cdcf;
+    border-radius: 5px 10px 15px 20px;
+  }
+
+  .userRatingR a{
+    margin-top: 16px;
+    width: 90px;
+      margin-left: 12%;
+      margin-right: 5%;
+  }
+  #Comment2{
+    margin-bottom: 20px;
+  }
