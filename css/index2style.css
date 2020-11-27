@@ -37,6 +37,7 @@
 
 .Type-in {
     grid-area: Type-in;
+    color: white;
 }
 
 .Suggestions {

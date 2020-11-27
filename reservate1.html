@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>PNSPARKLI</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
     <!-- Jquery -->
@@ -47,23 +47,25 @@
 
 
     <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-        <div class="col-xl-8 col-lg-7" style="margin-top: 10%"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="" width="98%" /></div>
+        <div class="col-xl-8 col-lg-7" style="margin-top: 10%"><img class="img-fluid mb-3 mb-lg-0" src="images/bg-masthead.jpg" alt="" width="98%" /></div>
         <div class="col-xl-4 col-lg-5" style="margin-top: 10%">
             <div class="featured-text text-center text-lg-left">
                 <div class="content" style="background-color: #61676B">
 
 
-                    <div class="Feedback"><span class="font2">Feedback</span></div>
-                    <div class="Type-in" style="background-color: #27292B"><span class="font3">Name of the park that you want give a feedback to?
-                            <button id="park" type="submit">Go</button><br></span>
+                    <div class="Feedback"><span class="font2">Search the events in your region</span></div>
+                    <div class="Type-in" style="background-color: #27292B"><span class="font3">Enter the country <br>
+                        </span>
                         <input type="text" id="input1">
                     </div>
-                    <div class="Suggestions" style="background-color: #27292B"><span class="font4">Description</span>
-                        <ul id="user"></ul>
-
+                    <div class="Suggestions" style="background-color: #27292B"><span class="font4">Enter the city<br></span>
+                        <input type="text" id="input2">
+                        <button id="park" type="submit">Go</button><br>
                     </div>
-                    <div class="Photo" style="background-color: #27292B"><span class="font5">Park photo</span></div>
-                    <div class="next"><a href='index3.html'><button id="next-button">next</button></a></div>
+                    <div class="Photo" style="background-color: #27292B"><span class="font5">Is the information you typed correct?</span>
+                        <ul id="user"></ul>
+                    </div>
+                    <div class="next"><a href='reservate.html'><button id="next-button">Next</button></a></div>
 
                 </div>
 
@@ -104,7 +106,53 @@
 
 
 
-   
+    <script>
+        $(document).ready(function() {
+
+            $("button#park").on("click", function() {
+                var country = $("#input1").val().trim();
+                var city = $("#input2").val().trim();
+
+                db.collection("ParkLocation").add({
+                    country: country,
+                    city: city
+
+                });
+                return false;
+            });
+
+            const parkName = document.querySelector('#user');
+
+            function renderName(doc) {
+                let li = document.createElement('li');
+                let country = document.createElement('span');
+                let city = document.createElement('span');
+
+                li.setAttribute("data-id", doc.id);
+                country.textContent = doc.data().country;
+                city.textContent = doc.data().city;
+                
+
+                li.appendChild(country);
+                li.appendChild(city);
+                
+                parkName.appendChild(li);
+            }
+
+            db.collection("ParkLocation").get().then((snapshot) => {
+                snapshot.docs.forEach(doc => {
+                    renderName(doc);
+                })
+            })
+
+
+
+
+
+
+        });
+
+    </script>
 
     <!-- Signup-->
     <section class="signup-section" id="signup">
