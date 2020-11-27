@@ -1,24 +1,16 @@
-  var firebaseConfig = {
-
-            // Your API stuff goes here;  get it from firebase console
-            apiKey: "AIzaSyASwCvqj3_Y7kchBbwF_RNTlfqsPh8wx4s",
-            authDomain: "pnsparkli.firebaseapp.com",
-            databaseURL: "https://pnsparkli.firebaseio.com",
-            projectId: "pnsparkli",
-            storageBucket: "pnsparkli.appspot.com",
-            messagingSenderId: "976943858986",
-            appId: "1:976943858986:web:e9ecdca5178a4c6a6d0a53",
-            measurementId: "G-0W1HFPTQHV"
-        };
-
-        // Initialize Firebase
+      var firebaseConfig = {
+            apiKey: "AIzaSyAetRwL1G2t4zoYq0fjVL1ZY3dVrM_Lw1M",
+            authDomain: "pnsparkli-66.firebaseapp.com",
+            databaseURL: "https://pnsparkli-66.firebaseio.com",
+            projectId: "pnsparkli-66",
+            storageBucket: "pnsparkli-66.appspot.com",
+            messagingSenderId: "1037794143098",
+            appId: "1:1037794143098:web:1f2b36cec1a6143793c4c3"
+        }; {
+            /* Initialize Firebase */ }
         firebase.initializeApp(firebaseConfig);
-        var database = firebase.database();
-        // Create the Firestore database object
-        // Henceforce, any reference to the database can be made with "db"
         const db = firebase.firestore();
-
-    
+        
         $(document).ready(function() {
 
             $("button#park").on("click", function() {
@@ -43,11 +35,11 @@
                 li.setAttribute("data-id", doc.id);
                 country.textContent = doc.data().country;
                 city.textContent = doc.data().city;
-                
+
 
                 li.appendChild(country);
                 li.appendChild(city);
-                
+
                 parkName.appendChild(li);
             }
 
